@@ -7,3 +7,33 @@ span { font-size: 20px }
 .texto1 { font-size: 40px }
 
 p.texto1 { font-size: 40px }
+
+p[name] { font-size: 20px }
+
+p[name="mitexto"] { font-size: 20px }
+
+p[name^="mi"] { font-size: 20px }/*Todo atributo que comienza con "mi"*/
+
+p[name$="mi"] { font-size: 20px }/*Todo atributo que contiene "mi" al final*/
+
+p[name*="mi"] { font-size: 20px }/*Todo atributo que puede encontrarse en el medio*/
+
+*{
+	margin: 0px
+}
+
+p:nth-child(1){
+	background: #999999;
+}
+
+p:nth-child(2) {
+	background: #CCCCCC;
+}
+
+p:nth-child(3){
+	background: #999999;
+}
+
+p:nth-child(4){
+	background: #CCCCCC;
+}
