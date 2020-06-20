@@ -1,0 +1,66 @@
+body {
+	text-align: center;
+}
+#principal {
+	display: block;
+	width: 500px;
+	margin: 50px auto;
+	padding: 15px;
+	text-align: center;
+	/*border: 29px;
+	-moz-border-image: url("juego.png") 29 stretch;
+	-webkit-border-image: url("juego.png") 29 stretch;
+	border-image: url("juego.png") 29 stretch;*/
+	border: 1px solid #999999;
+	background: #DDDDDD;
+/* imagen espejo
+	-moz-transform: scale(1, -1);
+	-webkit-transform: scale(1, -1);
+*/
+/*rotación de la imágen
+	-moz-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+*/
+/*inclinación de la imágen
+	-moz-transform: skew(20deg);
+	-webkit-transform: skew(20deg);
+*/
+/*movimiento de la caja
+	-moz-transform: translate(100px);
+	-webkit-transform: translate(100px);
+*/
+/*Moviendo, scalando y rotando
+	-moz-transform: translate(100px) rotate(45deg) scaleX(0.3);
+	-webkit-transform: translate(100px) rotate(45deg) scaleX(0.3);
+*/
+
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+
+	-moz-box-shadow: rgb(150, 150, 150) 5px 5px 10px;
+	-webkit-box-shadow: rgb(150, 150, 150) 5px 5px 10px;
+	box-shadow: rgb(150, 150, 150) 5px 5px 10px;
+
+	background: -webkit-radial-gradient(center, circle, #FFFFFF 0%, #006699 200%);
+	background: -moz-linear-gradient(top, #FFFFFF, #006699);
+/*	pone una linea punteada en el contorno
+	outline: 2px dashed #000099;
+	outline-offset: 15px;
+*/
+	-moz-transition: -moz-transform 0.2s ease-in-out 0.5s;
+	-webkit-transition: -webkit-transform 0.2s ease-in-out 0.5s;
+}
+#principal:hover {
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+}
+#titulo {
+	font: bold 36px MiNuevaFuente, verdana, sans-serif;
+	text-shadow: rgba(0, 0, 0, 0.5) 3px 3px 5px;
+	color: hsla(120, 100%, 50%, 0.5);
+}
+@font-face {
+	font-family: 'MiNuevaFuente';
+	src: url('font.ttf');
+}
