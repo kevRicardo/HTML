@@ -2,11 +2,30 @@
 <html lang="es">
 <head>
 	<title>Reproductor de video</title>
+	<link rel="stylesheet" href="reproductor.css">
+	<script src="reproductor.js"></script>
 </head>
 <body>
-	<section id="reproductor">
-		<video src="/home/vill/Documents/English IV/NLL_INT_Videos/Unit_03.mp4" controls>	
+	<!--<section id="reproductor">
+		<video id="medio" width="720" height="400" preload controls loop poster="/home/vill/Documents/HTML/Reproducir video/juego.png">
+			<source src="/home/vill/Documents/English IV/NLL_INT_Videos/Unit_03.mp4">
+			<source src="/home/vill/Documents/English IV/NLL_INT_Videos/Unit_03.ogg">
 		</video>
+	</section>-->
+	<section id="reproductor">
+		<video id="medio" width="720" height="400">
+			<source src="/home/vill/Documents/English IV/NLL_INT_Videos/Unit_03.mp4">
+			<source src="/home/vill/Documents/English IV/NLL_INT_Videos/Unit_03.ogg">
+		</video>
+		<nav>
+			<div id="botones">
+				<button type="button" id="reproducir">Reproducir</button>
+			</div>
+			<div id="barra">
+				<div id="progreso"></div>
+			</div>
+			<div style="clear: both;"></div>
+		</nav>
 	</section>
 </body>
 </html>
