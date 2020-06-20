@@ -22,7 +22,8 @@ function procesarCuadros(){
     for(x = 0; x <= 483; x++){
 	for(y = 0; y <= 272; y++){
 	    pos = (info.width*4*y) + (x*4);
-	    gris = parseInt(info.data[pos]*0.2989 + info.data[pos+1]*0.5870 + info.data[pos+2]*0.1140);
+	    gris = parseInt(info.data[pos]*0.2989 + 
+            info.data[pos+1]*0.5870 + info.data[pos+2]*0.1140);
 	    info.data[pos] = gris;
 	    info.data[pos+1] = gris;
 	    info.data[pos+2] = gris;
