@@ -3,7 +3,13 @@ function iniciar(){
     boton.addEventListener('click',obtener,false);
 }
 function obtener(){
-    navigator.geolocation.getCurrentPosition(mostrar);
+    var geoconfig = {
+	enableHighAccuracy: true,
+	//timeout: 10000,
+	maximumAge: 60000
+    };
+    //navigator.geolocation.getCurrentPosition(mostrar,errores,geoconfig);
+    control = navigator.geolocation.watchPosition(mostrar,errores,geoconfig);
 }
 function mostrar(posicion){
     var ubicacion = document.getElementById('ubicacion');
