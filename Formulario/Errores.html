@@ -27,6 +27,7 @@
 			edad.addEventListener("change", cambiarrango, false);
 			document.informacion.addEventListener("invalid", validacion, true);
 			document.getElementById("enviar").addEventListener("click", enviar, false);
+			document.informacion.addEventListener("input", controlar, false);
 		}
 		function cambiarrango(){
 			var salida = document.getElementById("rango");
@@ -39,12 +40,23 @@
 		}
 		function validacion(e){
 			var elemento = e.target;
-			elemento.style.background = '#FFDDDD'
+			elemento.style.background = '#FFDDDD';
 		}
 		function enviar(){
+			var elemento = document.getElementById("usuario");
 			var valido = document.informacion.checkValidity();
 			if(valido){
 				document.informacion.submit();
+			}else if(elemento.validity.patternMismatch || elemento.validity.valueMissing){
+				alert('el nombre de usuario debe tener mínimo de 3 caracteres');
+			}
+		}
+		function controlar(e){
+			var elemento = e.target;
+			if(elemento.validity.valid){
+				elemento.style.background = '#FFFFFF';
+			}else{
+				elemento.style.background = '#FFDDDD';
 			}
 		}
 		window.addEventListener("load", iniciar, false);
@@ -68,8 +80,7 @@
 			Email:
 			<input type="email" name="miemail" id="miemail" required>
 			Rango de Edad:
-			<input type="range" name="miedad" id="miedad" min="0" max="80" step="
-			20" value="20">
+			<input type="range" name="miedad" id="miedad" min="0" max="80" step="20" value="20">
 			<output id="rango">0 a 20</output>
 			<input type="button" id="enviar" value="ingresar">
 		</form>
