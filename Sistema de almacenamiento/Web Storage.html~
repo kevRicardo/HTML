@@ -3,7 +3,7 @@
   <head>
     <title>Web Storage API</title>
     <link rel="stylesheet" href="storage.css">
-    <script src="storage2.js"></script>
+    <script src="storage.js"></script>
   </head>
   <body>
     <section id="cajaformulario">
